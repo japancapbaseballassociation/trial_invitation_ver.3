@@ -65,7 +65,6 @@
       gap: 12px;
     }
 
-    /* ロゴ画像の白枠スタイリング */
     .logo-frame {
       background: #ffffff;
       padding: 4px 8px;
@@ -174,7 +173,23 @@
       color: var(--text-sub);
       font-size: 0.95rem;
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: 0 auto 25px;
+    }
+
+    /* 招待状画像エリア */
+    .invitation-banner {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.35);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .invitation-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .glass-card {
@@ -594,6 +609,11 @@
         次元を超えた高速魔球と最新エンターテインメント演出をアリーナで体感せよ！
       </p>
 
+      <!-- 招待状画像（最新版） -->
+      <div class="invitation-banner">
+        <img src="invitation.jpg" alt="CAP BASEBALL 無料招待状" onerror="this.onerror=null; this.style.display='none';">
+      </div>
+
       <div class="glass-card">
         <div style="text-align: left; margin-bottom: 10px; color: var(--accent-green); font-weight: 700; font-size: 0.9rem;">
           ⚡ 熱狂のニュースポーツエンターテインメント
@@ -839,6 +859,10 @@
       <div class="ticket-card">
         <div style="font-family: var(--font-cyber); font-size: 0.85rem; color: var(--primary-cyan); letter-spacing: 2px; font-weight: 800;">
           ★ CAP BASEBALL VIP INVITATION PASS ★
+        </div>
+
+        <div style="margin: 15px 0; border-radius: 8px; overflow: hidden; border: 1px solid var(--card-border);">
+          <img src="invitation.jpg" alt="CAP BASEBALL 招待状" style="width: 100%; height: auto; display: block;">
         </div>
         
         <div class="ticket-guest-name" id="ticket-name-display">
