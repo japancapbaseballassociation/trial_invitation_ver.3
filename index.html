@@ -48,8 +48,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 5%;
-      background: rgba(6, 9, 19, 0.9);
+      padding: 12px 5%;
+      background: rgba(6, 9, 19, 0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--card-border);
       position: sticky;
@@ -62,21 +62,33 @@
     .header-logos {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
+    }
+
+    /* ロゴ画像の白枠スタイリング */
+    .logo-frame {
+      background: #ffffff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(0, 242, 254, 0.4);
     }
 
     .header-logo-img {
-      height: 28px;
+      height: 24px;
       width: auto;
       object-fit: contain;
-      filter: brightness(0) invert(1); /* 黒文字ロゴを白に変光 */
-      opacity: 0.9;
+      display: block;
     }
 
     .header-divider {
-      color: var(--card-border);
-      font-size: 0.9rem;
-      font-weight: 300;
+      color: var(--primary-cyan);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin: 0 2px;
     }
 
     .logo-text-group {
@@ -88,6 +100,7 @@
       font-weight: 900;
       letter-spacing: 1.2px;
       color: #fff;
+      margin-left: 5px;
     }
 
     .logo-text-group i {
@@ -513,20 +526,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
       margin-bottom: 20px;
     }
 
     .footer-logo-img {
-      height: 35px;
+      height: 28px;
       width: auto;
-      filter: brightness(0) invert(1);
-      opacity: 0.8;
-      transition: opacity 0.3s;
-    }
-
-    .footer-logo-img:hover {
-      opacity: 1;
     }
 
     .partner-links {
@@ -560,9 +566,13 @@
 
   <header>
     <div class="header-logos">
-      <img src="wit_logo.jpg" alt="WIT COLLECTIVE" class="header-logo-img" onerror="this.onerror=null; this.style.display='none';">
-      <span class="header-divider">×</span>
-      <img src="jcba_logo.jpg" alt="JCBA" class="header-logo-img" onerror="this.onerror=null; this.style.display='none';">
+      <div class="logo-frame">
+        <img src="wit_logo.jpg" alt="WIT COLLECTIVE" class="header-logo-img" onerror="this.onerror=null; this.src='https://wit-collective.jp/wp-content/themes/wit/assets/img/logo.png';">
+      </div>
+      <span class="header-divider">✕</span>
+      <div class="logo-frame">
+        <img src="jcba_logo.jpg" alt="JCBA" class="header-logo-img" onerror="this.onerror=null; this.src='https://www.capbaseball-jcba.com/wp-content/uploads/2021/04/cropped-JCBA-logo.png';">
+      </div>
       <div class="logo-text-group">
         <i class="fa-solid fa-baseball-bat-ball"></i>
         <span>CAP BASEBALL</span>
@@ -859,12 +869,12 @@
     <!-- Footer -->
     <footer>
       <div class="footer-logos">
-        <a href="https://wit-collective.jp/" target="_blank" rel="noopener">
-          <img src="wit_logo.jpg" alt="WIT COLLECTIVE" class="footer-logo-img" onerror="this.onerror=null; this.style.display='none';">
-        </a>
-        <a href="https://www.capbaseball-jcba.com/" target="_blank" rel="noopener">
-          <img src="jcba_logo.jpg" alt="JCBA" class="footer-logo-img" onerror="this.onerror=null; this.style.display='none';">
-        </a>
+        <div class="logo-frame">
+          <img src="wit_logo.jpg" alt="WIT COLLECTIVE" class="footer-logo-img">
+        </div>
+        <div class="logo-frame">
+          <img src="jcba_logo.jpg" alt="JCBA" class="footer-logo-img">
+        </div>
       </div>
 
       <div class="partner-links">
